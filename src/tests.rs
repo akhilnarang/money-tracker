@@ -37,6 +37,8 @@ mod test {
             description: description.parse().unwrap(),
             amount,
             payment_method: payment_method.parse().unwrap(),
+            created: None,
+            last_updated: None,
         };
         let body = match serde_json::to_string(&request_body) {
             Ok(body) => body,
